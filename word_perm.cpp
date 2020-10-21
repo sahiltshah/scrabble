@@ -1,3 +1,6 @@
+//Words source: http://www.mieliestronk.com/corncob_lowercase.txt
+
+
 #include <iostream>
 #include <map>
 #include <vector>
