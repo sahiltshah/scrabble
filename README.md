@@ -43,7 +43,9 @@ Node count is: 143643 leaf count: 58110 char count: 0
 enter the number of unique characters: 
 enter each character one after the one followed by the frequnecy and the score, eg, two 'a's of each score of 1 are :- [a 2 1]
 the words in descending order of scores are: 
-
+```
+score | recommended word
+```
 40 glitzy // maximum score yield 
 30 yokel
 29 zealot
