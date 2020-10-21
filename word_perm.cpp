@@ -4,6 +4,7 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <fstream>
 using namespace std;
 
 int node_count=0;
@@ -87,14 +88,19 @@ void trie_creation()
     root=new Node();
     leaf=new Node();
     string c;
-    for(int i=0;i<total;i++)
-    {
-        cin>>c;
-        char_count+=c.length();
-        insert_word(root,c,c);
-        if(c.length()>maxlen)
-            maxlen=c.length();
-    }
+
+    ifstream f;
+    f.open("words.txt",ios::in);
+    if(f.is_open())
+        while(getline(f,c))
+            {
+                insert_word(root,c,c);
+                if(c.length()>maxlen)
+                    maxlen=c.length();
+            }
+    else
+        cout<<"file opening error"<<endl;
+    f.close();
     cout<<"Node count is: "<<node_count<<" leaf count: "<<leaf_count<<" char count: "<<char_count<<endl;
     
 }
@@ -133,7 +139,7 @@ void scrabble_recommender()
     }
     search_word(root);
     sort(recommendation.begin(),recommendation.end(),compareRecommendation);
-    cout<<" the words in descending order of scores are: "<<endl;
+    cout<<"the words in descending order of scores are: \n"<<endl;
     for(int i=0;i<recommendation.size();i++)
         cout<<score_word(recommendation[i])<<" "<<recommendation[i]<<endl;
 }

@@ -1,7 +1,8 @@
-Node count is: 143643 leaf count: 58110 char count: 484586
+Node count is: 143643 leaf count: 58110 char count: 0
 enter the number of unique characters: 
 enter each character one after the one followed by the frequnecy and the score, eg, two 'a's of each score of 1 are :- [a 2 1]
- the words in descending order of scores are: 
+the words in descending order of scores are: 
+
 40 glitzy
 30 yokel
 29 zealot
